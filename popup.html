@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="button.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="form-field-dependency.js"></script>
+</head>
+
+<body>
+    Hello from the dark side
+    <button id="buttonDiv" action=""></button>
+    <div class="form-group">
+        <label for="exampleInput5">A box will show if you write "lorem" or "ipsum".</label>
+        <input type="email" name="" class="form-control" id="exampleInput5" placeholder="">
+    </div>
+
+    <div class="form-group" data-depends="[{'#exampleInput5':{'type':'equal', 'value':['lorem','ipsum']}}]">
+        <label for="exampleInput6">Hidden Field</label>
+        <input type="email" class="form-control" id="exampleInput6" placeholder="">
+    </div>
+
+    <h5>Example 2 with checkbox:</h5>
+    <p>Check system 2 or system 3</p>
+
+    <div class="form-group">
+        <label class="checkbox-inline">
+        <input type="checkbox" class="system-checkboxes" id="inlineCheckboxs1" value="option1"> System 1
+    </label>
+        <label class="checkbox-inline">
+        <input type="checkbox" class="system-checkboxes" id="inlineCheckboxs2" value="option2"> System 2
+    </label>
+        <label class="checkbox-inline">
+        <input type="checkbox" class="system-checkboxes" id="inlineCheckboxs3" value="option3"> System 3
+    </label>
+    </div>
+
+    <div class="form-group" data-depends="[{'input.system-checkboxes':{'type':'equal', 'value':['option2','option3']}}]">
+        <label for="exampleInput7">Shown if system 2 or system 3 checked.</label>
+        <input type="email" class="form-control" id="exampleInput7" placeholder="">
+    </div>
+
+
+</body>
+
+</html>
