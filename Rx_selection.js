@@ -6,7 +6,7 @@ function click()
        
        
     chrome.tabs.query({currentWindow: true, active: true}, function(tabs){
-        Tab_Rx=["facebook","twitter","linkedin"]
+        Tab_Rx=["facebook","twitter","linkedin","youtube"]
 
             console.log(get_Rx(tabs[0].url));
             if(Tab_Rx.indexOf(get_Rx(tabs[0].url)) !== -1)
